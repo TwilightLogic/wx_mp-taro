@@ -1,83 +1,83 @@
 ## ADDED Requirements
 
-### Requirement: Structured learning path for React developers
-The project SHALL provide a staged learning path for developers who already understand React and want to start building WeChat Mini Programs with Taro.
+### Requirement: 面向 React 开发者的结构化学习路径
+项目必须提供一条结构化学习路径，帮助已经具备 React 经验的开发者开始使用 Taro 构建微信小程序。
 
-#### Scenario: Learner reads the onboarding flow
-- **WHEN** a React developer opens the learning guide
-- **THEN** the guide presents a clear sequence of stages from environment confirmation to hands-on Taro practice
+#### Scenario: 学习者查看学习主线
+- **WHEN** React 开发者打开这套学习内容
+- **THEN** 内容应展示一条清晰的学习顺序，从认识项目到动手实践逐步展开
 
-#### Scenario: Learner understands what to study first
-- **WHEN** the learner starts from the beginning of the guide
-- **THEN** the guide identifies the recommended starting topics instead of requiring the learner to infer an order
+#### Scenario: 学习者知道先学什么
+- **WHEN** 学习者从头进入这条路径
+- **THEN** 内容应明确指出推荐的起步内容，而不是让学习者自己推断学习顺序
 
-### Requirement: Code-first learning progression
-The learning path MUST be organized around coding tasks as the primary learning mechanism rather than long-form conceptual reading.
+### Requirement: 代码优先的学习推进方式
+学习路径必须以编码任务作为主要学习机制，而不是以长篇概念阅读作为主流程。
 
-#### Scenario: Learner enters the learning path
-- **WHEN** the learner starts the onboarding experience
-- **THEN** the guide presents a first coding task early in the flow instead of requiring the learner to finish a large block of theory first
+#### Scenario: 学习者开始学习
+- **WHEN** 学习者进入这条上手路径
+- **THEN** 内容应在较早阶段引导学习者开始第一个编码任务，而不是要求先读完大段理论
 
-#### Scenario: Learner advances through the guide
-- **WHEN** the learner moves from one stage to the next
-- **THEN** each stage is framed around a concrete coding objective, expected result, and supporting explanation
+#### Scenario: 学习者逐步推进
+- **WHEN** 学习者从一个阶段进入下一个阶段
+- **THEN** 每个阶段都应围绕明确的编码目标、预期结果和配套解释来组织
 
-### Requirement: Onboarding targets practical Taro independence
-The learning path MUST target a learner outcome where a React developer can understand the existing Taro project, modify an existing page, and create a simple new Mini Program page with basic platform capability usage.
+### Requirement: 学习目标指向可独立完成基础 Taro 开发
+学习路径必须以“能够看懂当前项目、修改已有页面、并创建一个简单新页面”为最低完成目标，同时包含基础平台能力的使用体验。
 
-#### Scenario: Learner completes the onboarding path
-- **WHEN** the learner finishes the guide
-- **THEN** the expected outcome includes reading the current project structure, editing existing page behavior, and building one simple new page in the repository
+#### Scenario: 学习者完成整条路径
+- **WHEN** 学习者完成全部学习内容
+- **THEN** 其预期结果应包括理解当前项目结构、修改现有页面行为，以及在仓库中完成一个简单新页面
 
-### Requirement: React-to-Taro concept mapping
-The learning guide MUST explain how common React development concepts map to Taro and WeChat Mini Program development in this repository.
+### Requirement: React 到 Taro 的概念映射
+学习内容必须解释常见 React 开发概念如何映射到当前仓库中的 Taro 和微信小程序开发方式。
 
-#### Scenario: Learner compares familiar concepts
-- **WHEN** the learner reviews routing, components, lifecycle, styling, or platform APIs
-- **THEN** the guide explains the equivalent Taro or WeChat concept and highlights the important difference from React web development
+#### Scenario: 学习者对照熟悉概念
+- **WHEN** 学习者在任务中接触到路由、组件、生命周期、样式或平台 API
+- **THEN** 内容应解释对应的 Taro 或微信小程序概念，并指出它与 React Web 开发的重要差异
 
-### Requirement: Repository-based practical exercises
-The project SHALL include hands-on exercises that use the current Taro codebase so learners can practice applying the documented concepts.
+### Requirement: 基于当前仓库的实践任务
+项目必须包含基于当前 Taro 代码仓库的实践任务，让学习者通过实际修改或新增文件来掌握概念。
 
-#### Scenario: Learner completes a basic exercise
-- **WHEN** the learner follows the guide's first practical task
-- **THEN** the task asks them to create or modify project files in the existing Taro structure rather than only reading theory
+#### Scenario: 学习者完成第一个任务
+- **WHEN** 学习者执行第一个实践任务
+- **THEN** 任务应要求其在现有项目结构中修改或新增实际文件，而不是只停留在阅读说明
 
-#### Scenario: Learner practices core mini program development tasks
-- **WHEN** the learner progresses through the exercises
-- **THEN** the exercises cover core tasks such as page creation, configuration, styling, state handling, or invoking platform APIs
+#### Scenario: 学习者练习核心能力
+- **WHEN** 学习者逐步完成后续任务
+- **THEN** 任务应覆盖页面创建、页面配置、样式、状态更新、事件处理或平台 API 调用等核心内容
 
-### Requirement: Exercises follow a progressive task sequence
-The practical path MUST include a progressive sequence that starts with modifying an existing page, then creating a new page, then adding interaction, then using a Mini Program API, and finally completing one integrative mini feature or page-level task.
+### Requirement: 渐进式任务序列
+实践路径必须采用固定的递进顺序：先修改现有页面，再新建页面，再添加交互，再调用小程序 API，最后完成一个整合性的小型功能或页面任务。
 
-#### Scenario: Learner follows the recommended practice flow
-- **WHEN** the learner completes the exercises in order
-- **THEN** the sequence builds from low-risk edits in the existing project toward a more independent final coding task
+#### Scenario: 学习者按推荐顺序完成练习
+- **WHEN** 学习者依次完成这些任务
+- **THEN** 任务难度应从低风险改动逐步提升到相对独立的最终练习
 
-### Requirement: Hybrid progression from concepts to mini feature
-The learning path MUST move from React-to-Taro concept mapping to a small number of focused exercises and end with one compact mini feature or page-level practice outcome.
+### Requirement: 从概念映射过渡到整合练习
+学习路径必须从 React 到 Taro 的概念迁移出发，通过若干聚焦练习，最终落到一个小型整合练习上。
 
-#### Scenario: Learner follows the recommended sequence
-- **WHEN** the learner advances through the guide
-- **THEN** the guide first explains concept mapping, then assigns focused practice tasks, and finally culminates in one integrative page-level exercise
+#### Scenario: 学习者沿主线前进
+- **WHEN** 学习者按主线推进
+- **THEN** 内容应先帮助其建立概念映射，再通过具体任务实践，最后收束到一个整合性的页面或小功能练习
 
-### Requirement: Guidance supports self-implementation
-The learning materials MUST support the learner in writing the code themselves by providing goals, file context, and validation criteria without making full worked solutions the primary experience.
+### Requirement: 支持学习者自己实现代码
+学习材料必须通过目标说明、文件上下文和验证标准来支持学习者自己实现代码，而不是把完整参考答案作为默认体验。
 
-#### Scenario: Learner starts a task
-- **WHEN** the learner opens a coding task
-- **THEN** the task explains what to build, where to work, and how to verify success while still leaving room for the learner to implement the code independently
+#### Scenario: 学习者开始一个任务
+- **WHEN** 学习者打开某个编码任务
+- **THEN** 任务应说明要实现什么、在哪里实现、如何验证成功，同时保留足够空间让学习者自行完成代码
 
-### Requirement: Exercises stay grounded in the current repository
-Each exercise MUST reference the current repository structure, relevant files, and runnable commands so the learner can connect each concept to concrete project context.
+### Requirement: 任务必须锚定当前仓库上下文
+每个任务都必须引用当前仓库中的真实目录、文件或可运行命令，帮助学习者把概念与项目实际结构关联起来。
 
-#### Scenario: Learner starts a guided exercise
-- **WHEN** the learner begins an exercise
-- **THEN** the exercise points to the relevant files, directories, or build commands in this repository rather than describing the task only in abstract terms
+#### Scenario: 学习者查看任务说明
+- **WHEN** 学习者进入某个任务
+- **THEN** 任务说明应引用本仓库中的相关文件、目录或命令，而不是只提供抽象化描述
 
-### Requirement: Measurable completion criteria
-The learning path MUST define what a learner can complete to consider the onboarding successful.
+### Requirement: 可验证的完成标准
+学习路径必须定义清晰的完成标准，让学习者能够判断自己是否已经达到基础上手目标。
 
-#### Scenario: Learner checks progress
-- **WHEN** the learner reaches the end of the guide
-- **THEN** the guide includes a checklist, outcome summary, or equivalent completion criteria for validating core understanding
+#### Scenario: 学习者检查是否完成
+- **WHEN** 学习者完成整条路径
+- **THEN** 内容应提供检查清单、结果说明或等价的完成标准，用来验证其是否掌握核心内容

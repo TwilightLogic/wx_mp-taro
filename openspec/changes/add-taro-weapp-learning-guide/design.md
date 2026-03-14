@@ -1,78 +1,78 @@
 ## Context
 
-This repository is already a minimal Taro 4 + React starter for WeChat Mini Programs, with working build scripts and a basic page structure. The current gap is not project setup but learning guidance: a React developer can run the app, yet still lack a clear understanding of how page routing, lifecycle, platform APIs, styling boundaries, and WeChat-specific constraints differ from traditional React web development.
+当前仓库已经是一个最小可运行的 Taro 4 + React 微信小程序项目，构建命令、基础页面结构和项目入口都已经具备。问题不在于脚手架本身，而在于缺少一条对 React 开发者足够友好的学习路径。学习者虽然能把项目跑起来，但仍然不一定知道页面路由、生命周期、平台 API、样式边界，以及微信小程序环境与 React Web 的关键差异。
 
-The design should turn the repository into a guided learning environment. The key shift is that learning should be code-first: the learner should primarily progress by completing coding tasks inside this repository, with explanations attached to tasks as support rather than as the main experience. The structure needs to stay close to the current codebase so the learner can connect each concept to real files, commands, and project behaviors.
+这次设计的目标，是把这个仓库变成一个“带练式”的学习环境。核心转变是：学习应当以写代码为主，而不是以阅读长文档为主。说明内容依附在任务旁边，帮助学习者在需要时理解概念；真正推动学习前进的，是在当前仓库里持续修改、运行、验证代码的过程。
 
 ## Goals / Non-Goals
 
 **Goals:**
-- Define a learning experience tailored to developers who already know React but are new to Taro and WeChat Mini Programs.
-- Organize implementation around a staged coding journey, practical exercises, and repository-specific examples.
-- Reuse the existing project structure and build commands so learners can start from the current codebase without extra setup complexity.
-- Make the primary path depend on the learner writing code themselves rather than consuming long-form tutorials.
-- Make the future implementation concrete enough that `tasks.md` can break it into actionable steps.
+- 为已经具备 React 开发经验、但刚接触 Taro 和微信小程序的开发者设计一条上手路径。
+- 围绕一条循序渐进的编码旅程组织学习内容，而不是先铺陈大段理论。
+- 复用当前仓库的目录结构、页面组织方式和构建命令，降低学习者进入成本。
+- 让学习者通过自己动手写代码，逐步获得对 Taro 项目结构、页面机制和平台能力的基本掌握。
+- 把方案细化到足以支撑后续 `tasks.md` 继续拆解和落地。
 
 **Non-Goals:**
-- Rebuild the project scaffold or replace the existing Taro runtime configuration.
-- Provide an exhaustive reference for every Taro API or every WeChat Mini Program capability.
-- Introduce backend services, authentication, or production business features unrelated to onboarding.
-- Turn the repository into a fully automated course platform with grading or hidden-answer infrastructure.
+- 不重建当前脚手架，也不替换现有 Taro 构建或运行配置。
+- 不追求把所有 Taro API 或所有微信小程序能力都讲全。
+- 不引入与入门训练无关的后端、认证或复杂业务能力。
+- 不把仓库做成一个带自动评分、隐藏答案、完整课程系统的教学平台。
 
 ## Decisions
 
-### Use a code-first onboarding path instead of a reading-first tutorial
-The change will be implemented as a sequence of coding stages where the learner writes code early and often. Explanations will support each task, but the primary learning mechanism will be editing, running, and validating code in the existing Taro project. This better fits a developer who already knows React and mainly needs Taro-specific hands-on fluency.
+### 采用“代码优先”而不是“阅读优先”的上手方式
+学习流程应该让学习者尽早进入写代码状态。说明文档的职责是辅助，而不是主流程本身。对于已经有 React 开发经验的用户，真正缺少的是 Taro 和微信小程序环境里的手感、边界感和迁移路径，这些更适合通过频繁的小步编码来建立。
 
-Alternative considered: a reading-first tutorial that introduces concepts before any meaningful coding task.
-Why not: it is easier to write, but it delays hands-on feedback and makes it too easy for experienced developers to read without building real Taro intuition.
+备选方案：先用一篇长教程讲完概念，再安排实践。
+不采用原因：这种方式写起来简单，但会推迟动手反馈，也容易让有经验的开发者停留在“看懂了”而不是“会做了”。
 
-### Use a progressive five-task sequence
-The primary path should progress through five stages:
-1. Modify an existing page
-2. Create a new page
-3. Add an interaction
-4. Use a Mini Program API through Taro
-5. Build one compact integrative mini feature
+### 采用五段式任务递进主线
+主流程按以下顺序推进：
+1. 修改现有页面
+2. 新建一个页面
+3. 添加一个交互
+4. 调用一个小程序 API
+5. 完成一个小型整合功能
 
-This sequence starts with low-risk changes in familiar files and gradually increases independence. It gives the learner repeated feedback loops while covering the core Taro and Mini Program concepts needed for basic productivity.
+这条路径的目的，是让学习者从最小风险的修改开始，逐步增加独立性和复杂度。前几步帮助熟悉项目结构和页面组织，后几步帮助建立对交互、平台能力和完整页面能力的整体认识。
 
-Alternative considered: a collection of unrelated exercises.
-Why not: unrelated tasks teach isolated facts but do not create a coherent sense of progression or accomplishment.
+备选方案：提供若干彼此独立的练习题。
+不采用原因：离散练习可以覆盖知识点，但不容易形成连续的进步感，也不利于学习者建立整体认知。
 
-### Attach concept mapping and explanations to tasks
-The implementation should include React-to-Taro mapping and WeChat-specific explanations, but these should be delivered next to the tasks that make them relevant. For example, page configuration should be explained when creating a new page, and platform API constraints should be explained when invoking a Mini Program capability.
+### 说明内容与任务绑定，而不是集中前置
+React 到 Taro 的概念映射、微信小程序的约束、生命周期或配置差异，都应该在学习者真正需要它们的时候出现。例如，创建页面时讲页面注册和配置，调用平台能力时讲 Taro 对 API 的封装和运行环境限制。
 
-Alternative considered: collect all conceptual material in one large upfront section.
-Why not: it increases cognitive load and breaks the code-first learning rhythm.
+备选方案：把概念讲解集中放在一个大章节里。
+不采用原因：这种方式认知负担更大，也会打断代码优先的节奏。
 
-### Design the experience as guided self-implementation
-Tasks should provide goals, relevant files, verification criteria, and lightweight hints, but they should not make full worked solutions the main experience. The learner should feel that they are implementing the code themselves, not merely reading or copying a finished example.
+### 任务设计为“引导式自我实现”
+每个任务应该提供目标、涉及文件、预期结果、验证方式和适量提示，但不应把完整答案作为默认体验。学习者需要保有“这是我自己写出来的”感受，而不是只是在跟着抄示例。
 
-Alternative considered: shipping full reference answers as the default path.
-Why not: it weakens active learning and shifts the experience from problem solving to imitation.
+备选方案：直接提供完整参考实现，学习者对照阅读。
+不采用原因：这会削弱主动探索和问题解决过程，学习体验更接近模仿而不是掌握。
 
-### Keep implementation low-risk by placing learning assets alongside, not inside, core build logic
-Future implementation should prefer adding dedicated docs, guided task content, and isolated practice pages or examples rather than changing foundational build configuration. That keeps the learning change easy to review and unlikely to disrupt the starter project's ability to build for WeChat.
+### 学习资产尽量贴近现有仓库，而不是侵入底层构建
+后续实现优先通过补充文档、任务说明、练习页面或示例内容来完成，而不是去改动底层构建逻辑。这样风险更低，也更符合“在现有项目中学习”的定位。
 
-Alternative considered: embedding guidance into build scripts or generated templates.
-Why not: it increases maintenance cost and creates unnecessary coupling between tooling and learning content.
+备选方案：把学习引导嵌入构建脚本或代码生成流程中。
+不采用原因：维护成本更高，而且会把教学内容和工程配置耦合在一起。
 
 ## Risks / Trade-offs
 
-- [Risk] Learners may still feel overwhelmed if the tasks jump too quickly in difficulty. → Mitigation: use the five-stage progression from modification to independent mini feature.
-- [Risk] A code-first path can become frustrating if hints are too sparse. → Mitigation: attach concise explanations, file references, and validation criteria to every task.
-- [Risk] Practice tasks may drift away from the actual repository structure over time. → Mitigation: anchor each task to existing directories, commands, and page patterns in this project.
-- [Risk] WeChat-specific constraints can become outdated as the ecosystem evolves. → Mitigation: focus on stable platform concepts and keep version-sensitive details lightweight.
-- [Risk] Full sample answers could undermine the intended self-implementation experience. → Mitigation: make goals and checks prominent, and keep any reference implementation secondary.
+- [Risk] 任务难度上升过快，会让学习者在中途失去节奏。 → Mitigation: 使用固定的五段式递进路径，从改现有页面开始，逐步过渡到独立完成整合功能。
+- [Risk] 如果提示太少，代码优先的路径可能会让初学者频繁卡住。 → Mitigation: 为每个任务补充简洁的概念说明、相关文件和验证标准。
+- [Risk] 如果提示太多，学习体验会退化成照着脚本执行。 → Mitigation: 以目标、上下文和验收为主，弱化完整答案和一步一步的指令化写法。
+- [Risk] 练习内容可能随着仓库结构变化而失真。 → Mitigation: 任务说明必须锚定现有目录、命令和页面结构，避免抽象化表达。
+- [Risk] 微信小程序平台的一些细节会随着生态变化而过时。 → Mitigation: 优先讲稳定的概念和基础能力，把强版本依赖的细节控制在较小范围。
 
 ## Migration Plan
 
-No runtime migration is required for the proposal phase. Future implementation can be rolled out incrementally by adding documentation, guided coding tasks, and optional practice pages without modifying existing working flows. If any practice asset causes confusion or build issues, it can be removed independently with low rollback cost.
+proposal 阶段不涉及运行时迁移。后续实现可以逐步补充学习入口、任务说明、辅助文档和可选练习页面，而不需要破坏现有工程流程。如果某个练习页面或任务设计不合适，也可以独立回退，风险较低。
 
 ## Open Questions
 
-- Should the eventual implementation live primarily in `README.md`, a dedicated `docs/` directory, or both?
-- How much guidance should each task provide before it starts to feel like the learner is following a script rather than implementing independently?
-- Should practice pages be shipped as visible sample pages in the app, or described as learner-created exercises only?
-- What mini feature best balances realism, small scope, and coverage of core Taro concepts?
+- 学习入口最终放在 `README.md`、`docs/`，还是两者结合？
+- 每个任务的提示力度应该控制到什么程度，既不让人无从下手，也不让人变成照抄？
+- 练习页面是直接作为仓库内可见页面提供，还是主要以“由学习者自己创建”为主？
+- 最后那个“小型整合功能”应该选什么题材，才能同时兼顾真实感、覆盖面和实现成本？

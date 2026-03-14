@@ -1,23 +1,23 @@
-## 1. Learning Experience Structure
+## 1. 学习体验结构
 
-- [ ] 1.1 Decide where the code-first learning path will live in the repository (`README.md`, `docs/`, or both) and define the entry experience
-- [ ] 1.2 Draft the staged coding journey so learners start writing code early and progress through the recommended task order
-- [ ] 1.3 Align the learning flow with the current repository structure, commands, and existing starter files
+- [ ] 1.1 确定这条代码优先的学习路径最终放在仓库的哪里，并设计学习者进入后的第一屏体验
+- [ ] 1.2 设计整条编码旅程的主线，确保学习者能尽早开始写代码，并按照推荐顺序逐步推进
+- [ ] 1.3 让学习流程与当前仓库的目录结构、构建命令和 starter 文件保持一致
 
-## 2. Task-Driven Learning Content
+## 2. 任务驱动的学习主线
 
-- [ ] 2.1 Define task 1 for modifying an existing page, including learner goal, touched files, and success checks
-- [ ] 2.2 Define task 2 for creating a new page and task 3 for adding interaction, including the Taro concepts each task is meant to teach
-- [ ] 2.3 Define task 4 for using a Mini Program API and task 5 for building the final mini feature, including how the difficulty ramps up
+- [ ] 2.1 定义任务 1“修改现有页面”，明确学习目标、涉及文件和完成标志
+- [ ] 2.2 定义任务 2“新建页面”和任务 3“添加交互”，明确它们各自要覆盖的 Taro 核心概念
+- [ ] 2.3 定义任务 4“调用小程序 API”和任务 5“完成小型整合功能”，并说明难度如何逐步提升
 
-## 3. Supporting Explanations And Guidance
+## 3. 配套说明与引导
 
-- [ ] 3.1 Document the React-to-Taro concept mapping needed to support each task at the point where the learner will need it
-- [ ] 3.2 Add focused explanations for routing, page configuration, lifecycle, styling, and platform API differences as just-in-time guidance
-- [ ] 3.3 Ensure each task references concrete files, commands, validation outcomes, and lightweight hints without making full solutions the main path
+- [ ] 3.1 按任务节点补充 React 到 Taro 的概念映射，让学习者在需要时看到对应说明
+- [ ] 3.2 补充围绕路由、页面配置、生命周期、样式和平台 API 的即时解释内容
+- [ ] 3.3 确保每个任务都包含真实文件、命令、验证结果和轻量提示，但不把完整答案作为主路径
 
-## 4. Completion And Review
+## 4. 完成标准与收尾检查
 
-- [ ] 4.1 Add a completion checklist or equivalent success criteria for the full onboarding path
-- [ ] 4.2 Verify that the task flow, supporting explanations, and final mini feature collectively satisfy all requirements in `specs/taro-learning-guide/spec.md`
-- [ ] 4.3 Run a final review for clarity, progression, learner independence, and implementation readiness before starting `/opsx:apply`
+- [ ] 4.1 为整条学习路径补充完成清单或等价的验收标准
+- [ ] 4.2 检查任务主线、配套说明和最终整合练习是否满足 `specs/taro-learning-guide/spec.md` 中的要求
+- [ ] 4.3 在开始 `/opsx:apply` 前，复查整体顺序、难度递进、学习者自主实现空间和实现可行性

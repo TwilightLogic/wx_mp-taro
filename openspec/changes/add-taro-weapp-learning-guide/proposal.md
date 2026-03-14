@@ -1,25 +1,25 @@
 ## Why
 
-Although this repository is already a Taro React starter, it does not yet provide a clear code-first path for an experienced React developer to learn how Taro maps web development concepts to WeChat Mini Program development. Adding a structured, task-driven learning flow now will shorten onboarding time and turn the project into a hands-on training sandbox instead of only a scaffold.
+当前仓库已经是一个可运行的 Taro React 小程序脚手架，但它还没有提供一条清晰的、适合 React 开发者的上手路径，帮助学习者把 Web 开发经验迁移到微信小程序场景中。现在补上一套以“自己写代码”为主线的学习流程，可以把这个仓库从单纯的模板，升级为一个真正可用于训练和入门的实践项目。
 
 ## What Changes
 
-- Add a code-first learning path for React developers who are new to Taro and WeChat Mini Programs.
-- Define a staged task flow that teaches Taro fundamentals through writing code in the existing project instead of primarily reading theory.
-- Add progressive exercises that move from modifying an existing page to building a small integrative mini feature.
-- Provide just-in-time explanations that support coding tasks, including Taro fundamentals, WeChat platform constraints, and React-to-Taro concept mapping.
-- Define success criteria for completing the onboarding path so the change can later be implemented consistently.
+- 增加一条面向 React 开发者的、以编码任务为核心的 Taro 学习路径。
+- 定义一个循序渐进的任务流程，让学习者通过在当前项目里亲手写代码来理解 Taro 的核心概念，而不是主要依赖长篇理论阅读。
+- 设计一组渐进式练习，路径从修改现有页面开始，逐步过渡到新增页面、交互、平台 API 使用，最后完成一个小型整合练习。
+- 补充围绕任务展开的即时说明，包括 Taro 基础、微信小程序平台约束，以及 React 到 Taro 的概念映射。
+- 定义完成学习路径后的验收标准，便于后续实现和复盘。
 
 ## Capabilities
 
 ### New Capabilities
-- `taro-learning-guide`: Provides a structured, code-first learning path for React developers to understand and build WeChat Mini Programs with Taro in this repository through progressive hands-on tasks.
+- `taro-learning-guide`: 提供一条面向 React 开发者的、代码优先的 Taro 微信小程序学习路径，学习者通过一系列渐进任务在当前仓库中完成入门训练。
 
 ### Modified Capabilities
 - None.
 
 ## Impact
 
-- Affects project documentation, onboarding flow, and learning-task structure for this Taro codebase.
-- Uses the existing Taro React starter structure in `src/`, `config/`, and the WeChat Mini Program build workflow from `package.json`.
-- Does not require immediate API or runtime changes for the proposal phase, but future implementation may add guided task content, learning docs, sample pages, and practice checkpoints.
+- 影响当前仓库的文档结构、学习入口和任务式上手流程。
+- 基于现有的 Taro React 项目结构，包括 `src/`、`config/` 以及 `package.json` 中的小程序构建命令。
+- proposal 阶段不会直接修改运行时代码，但后续实现阶段可能会补充学习文档、任务说明、示例页面和阶段性检查点。
